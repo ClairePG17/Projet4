@@ -1,0 +1,77 @@
+/* Variables */
+$background-primary-color : #F6F6F6 ;
+$background-secondary-color : #EAEAEA ;
+$secondary-color : #FCA311 ;
+$primary-color : #9356DC ;
+$green-light : #99E2D0 ;
+$green-font : #008766 ;
+$white : #FFFFFF ;
+$font-primary : #101010 ;
+$font-secondary : #353535 ;
+$button-gradient : linear-gradient(#FF79DA, #9356DC) ;
+$font-primary : 'Roboto', sans-serif;
+
+/* Mixin */
+
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body {
+    margin: 14px 0px 22px 0px;
+    background-color: $white;
+    font-family: $font-primary;
+  }
+
+.button{
+  background: $button-gradient;
+  color: $white;
+  border-radius: 25px;
+  padding: 13px 19px;
+  margin-top: 27px;
+  width: fit-content;
+}
+
+/* Header */
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .header__loc {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: $background-secondary-color;
+        gap: 17px;
+        padding: 17px 15px;
+        width: 100vw; 
+        margin-top: 13px;
+        color: $font-secondary;
+        border: 1px solid $background-secondary-color;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25), 0 -4px 15px rgba(0, 0, 0, 0.25);
+    }
+}
+
+/* hero */
+
+.hero{
+  padding: 40px;
+  padding-bottom: 57px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 27px;
+  background-color: $background-primary-color;
+  width: 100%;
+  .hero__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,0 +1,63 @@
+/* Variables */
+/* Mixin */
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 14px 0px 22px 0px;
+  background-color: #FFFFFF;
+  font-family: "Roboto", sans-serif;
+}
+
+.button {
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: #FFFFFF;
+  border-radius: 25px;
+  padding: 13px 19px;
+  margin-top: 27px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+/* Header */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header .header__loc {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #EAEAEA;
+  gap: 17px;
+  padding: 17px 15px;
+  width: 100vw;
+  margin-top: 13px;
+  color: #353535;
+  border: 1px solid #EAEAEA;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25), 0 -4px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* hero */
+.hero {
+  padding: 40px;
+  padding-bottom: 57px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 27px;
+  background-color: #F6F6F6;
+  width: 100%;
+}
+.hero .hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}/*# sourceMappingURL=style.css.map */
