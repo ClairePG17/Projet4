@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Variables */
 /* Mixin */
 /* General */
@@ -39,7 +40,7 @@ body {
   flex-direction: column;
   align-items: center;
 }
-.header .header__loc {
+.header__loc {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -51,7 +52,7 @@ body {
   margin-top: 13px;
   color: #353535;
   border: 1px solid #EAEAEA;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25), 0 -4px 15px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 /* hero */
@@ -66,7 +67,7 @@ body {
   background-color: #F6F6F6;
   width: 100%;
 }
-.hero .hero__content {
+.hero__content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -76,21 +77,72 @@ body {
 .Fonctionnement {
   margin: 50px 20px 68px 20px;
 }
+.Fonctionnement__Card {
+  display: flex;
+  gap: 27px;
+  border: 1px solid #F6F6F6;
+  background-color: #F6F6F6;
+  border-radius: 20px;
+  padding: 25px 38px 25px 34px;
+  margin-top: 25px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+.Fonctionnement ol {
+  list-style: none;
+}
+.Fonctionnement ol li {
+  counter-increment: list-counter; /* Incrémente le compteur */
+  position: relative;
+}
+.Fonctionnement ol li::before {
+  content: counter(list-counter); /* Affiche le numéro */
+  position: absolute;
+  left: -15px; /*pour le chevauchement*/
+  top: calc(50% - 15px); /*centre l'èlément*/
+  z-index: 1; /*pour que le numéro soit devant*/
+  width: 30px;
+  height: 30px;
+  background-color: #9356DC;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
 
 /* section Restaurants */
 .Restaurants {
   background-color: #F6F6F6;
   margin-top: 68px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 54px 20px 68px 20px;
 }
-.Restaurants .Restaurants__Card {
+.Restaurants__button-new {
+  Color: #008766;
+  border: 1px solid #99E2D0;
+  padding: 7px 10px;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #99E2D0;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 1;
+  top: 15px;
+  right: 15px;
+}
+.Restaurants__Card {
   border-radius: 15px;
   height: 251px;
   background-color: #FFFFFF;
   margin-top: 18px;
 }
-.Restaurants .Restaurants__Card .Restaurants__Card__Legend {
+.Restaurants__Card__Image {
+  position: relative;
+}
+.Restaurants__Card__Legend {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
@@ -104,13 +156,13 @@ body {
   gap: 7px;
   padding: 22px 25px;
 }
-.footer .footer__list {
+.footer__list {
   list-style: none;
 }
-.footer .footer__logo {
+.footer__logo {
   background-color: #353535; /* attention j'ai un prb avec mon logo */
 }
-.footer .footer__listwithicon {
+.footer__listwithicon {
   display: flex;
   gap: 11px;
 }/*# sourceMappingURL=style.css.map */
