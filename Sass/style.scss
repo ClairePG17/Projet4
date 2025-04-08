@@ -1,9 +1,10 @@
 /* Variables */
 $background-primary-color : #F6F6F6 ;
 $background-secondary-color : #EAEAEA ;
-$secondary-color : #FCA311 ;
+$orange-color : #FCA311 ;
 $primary-color : #9356DC ;
-$green-light : #99E2D0 ;
+$secondary-color: #FF79DA;
+$tertiary-color : #99E2D0 ;
 $green-font : #008766 ;
 $white : #FFFFFF ;
 $font-primary : #101010 ;
@@ -33,6 +34,10 @@ body {
   padding: 13px 19px;
   margin-top: 27px;
   width: fit-content;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .photo{
@@ -98,7 +103,10 @@ body {
         margin-top: 25px;
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
         position: relative;
-      }
+        &:hover{
+              cursor: pointer;
+          }
+        }
       ol {
         list-style: none;
       }  
@@ -137,10 +145,10 @@ body {
   padding: 54px 20px 68px 20px;
   &__button-new{
     Color: $green-font;
-    border: 1px solid $green-light;
+    border: 1px solid $tertiary-color;
     padding: 7px 10px;
     width: fit-content;
-    background-color: $green-light;
+    background-color: $tertiary-color;
     border-radius: 2px;
     position: absolute;
     z-index: 1;
@@ -161,6 +169,9 @@ body {
       justify-content: space-between;
       padding: 16px 25px 12px 16px;
     }
+    &:hover{
+      cursor: pointer;
+    }
   }
 }
 
@@ -175,7 +186,7 @@ body {
     list-style: none;
   }
   &__logo{
-    background-color: $font-secondary;    /* attention j'ai un prb avec mon logo */
+    background-color: $font-secondary;    
   }
   &__listwithicon{
     display: flex;
@@ -183,4 +194,60 @@ body {
   }
 }
 
+/*********** Animations et Transitions ***********/
+
+/*Boutons survols*/
+
+.button-animation{
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  transition: box-shadow 300ms;
+  &:hover{
+    box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+    &::after{
+      opacity:1;
+    }
+  }
+  &::after{
+    content: "";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.15); /*pour rajouter une voile blanc au survol*/
+    z-index: -1;
+    transition: opacity 300ms;
+    border-radius: 25px;
+  }
+}
+
+/*Boutons Like*/
+
+.button-like{
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  &:hover{
+    &::after{
+    opacity: 1;
+    }
+  }
+  &::after{
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+    transition: opacity 300ms;
+  }
+}
+
+/*Loader*/
 
