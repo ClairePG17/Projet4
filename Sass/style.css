@@ -205,26 +205,82 @@ body {
   border-radius: inherit;
 }
 
-/*Boutons Like*/
-.button-like {
-  display: inline-block;
+/* Bouton Like */
+.like-button {
   position: relative;
-  z-index: 1;
+  width: 24px;
+  height: 24px;
+  overflow: hidden; /* Cache les parties des images qui dépassent */
+  cursor: pointer;
+  z-index: 10; /* Assure que le bouton est au-dessus des autres éléments */
 }
-.button-like:hover::after {
-  opacity: 1;
-}
-.button-like::after {
-  content: "";
+
+/* Image par défaut (non likée) */
+.like-img-default {
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: red;
-  opacity: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: -webkit-clip-path 0.4s ease-in-out;
+  transition: clip-path 0.4s ease-in-out;
+  transition: clip-path 0.4s ease-in-out, -webkit-clip-path 0.4s ease-in-out; /* Transition fluide pour le masque */
+  -webkit-clip-path: inset(0%);
+          clip-path: inset(0%); /* Visible par défaut */
+}
+
+/* Image au survol (likée) */
+.like-button {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  overflow: hidden; /* Cache les parties des images qui dépassent */
+  cursor: pointer;
+}
+
+/* Image par défaut (non likée) */
+.like-img-default {
   position: absolute;
-  z-index: -1;
-  transition: opacity 300ms;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: -webkit-clip-path 0.2s ease-in-out;
+  transition: clip-path 0.2s ease-in-out;
+  transition: clip-path 0.2s ease-in-out, -webkit-clip-path 0.2s ease-in-out; /* Transition fluide pour le masque */
+  -webkit-clip-path: inset(0%);
+          clip-path: inset(0%); /* Visible par défaut */
+}
+
+/* Image au survol (likée) */
+.like-img-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: -webkit-clip-path 0.2s ease-in-out;
+  transition: clip-path 0.2s ease-in-out;
+  transition: clip-path 0.2s ease-in-out, -webkit-clip-path 0.2s ease-in-out; /* Transition fluide pour le masque */
+  -webkit-clip-path: inset(100% 0% 0%);
+          clip-path: inset(100% 0% 0%); /* Cachée par défaut (masquée par le bas) */
+}
+
+/* Effet au survol : apparition de bas en haut */
+.like-button:hover .like-img-default {
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%); /* Masque l'image par défaut vers le haut */
+}
+
+.like-button:hover .like-img-hover {
+  -webkit-clip-path: inset(0%);
+          clip-path: inset(0%); /* Affiche l'image "likée" depuis le bas */
 }
 
 /*Loader*/
