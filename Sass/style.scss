@@ -200,12 +200,11 @@ body {
 /*********** Animations et Transitions ***********/
 
 /*Boutons survols*/
-
 .button-animation{
   position: relative;
-  z-index: 1;
-  display: inline-block;
+  z-index: 0;
   transition: box-shadow 300ms;
+  overflow: hidden;
   &:hover{
     box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
     &::after{
@@ -216,16 +215,14 @@ body {
     content: "";
     position: absolute;
     opacity: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(255, 255, 255, 0.15); /*pour rajouter une voile blanc au survol*/
-    z-index: -1;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.25);;/*pour rajouter une voile blanc au survol*/
+    z-index: 5;
     transition: opacity 300ms;
-    border-radius: 25px;
+    border-radius: inherit;
   }
 }
+
 
 /*Boutons Like*/
 
@@ -324,4 +321,3 @@ body {
       visibility: hidden; 
   }
 }
-
