@@ -11,9 +11,7 @@ $font-primary : #101010 ;
 $font-secondary : #353535 ;
 $button-gradient : linear-gradient(#FF79DA, #9356DC) ;
 $font-primary : 'Roboto', sans-serif;
-$duration: 1.5s; /* Durée totale de la barre de progression */
-$duration-delay: 0.5s; /* Délai avant le début de la barre */
-$content-delay: $duration + ($duration-delay * 2); /* Calcul du délai pour afficher le contenu */
+$font-Resto-title : 'Shrikhand', sans-serif;
 
 /* General */
 * {
@@ -27,6 +25,17 @@ body {
     background-color: $white;
     font-family: $font-primary;
   }
+
+a {
+    width: 100%;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    &:hover {
+        cursor: pointer;
+    }
+}
 
 
 /* Composants */

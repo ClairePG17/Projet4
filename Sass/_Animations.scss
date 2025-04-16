@@ -1,4 +1,7 @@
 /*********** Animations et Transitions ***********/
+$duration: 1.5s; /* Durée totale de la barre de progression */
+$duration-delay: 0.5s; /* Délai avant le début de la barre */
+$content-delay: $duration + ($duration-delay * 2); /* Calcul du délai pour afficher le contenu */
 
 /*Boutons survols*/
 .button-animation{
@@ -25,28 +28,24 @@
   }
   
   /* Bouton Like */
-  
   .like-button {
     position: relative;
     width: 22px; 
     height: 21px;
-  
     .like-img-default,
     .like-img-hover {
       position: absolute;
       width: 100%;
       height: 100%;
       transition: opacity 0.3s ease-in-out;
+      z-index: 1;
     }
-  
     .like-img-default {
       opacity: 1;
     }
-  
     .like-img-hover {
       opacity: 0;
     }
-  
     &:hover {
       .like-img-default {
         opacity: 0;
@@ -71,11 +70,9 @@
     align-items: center;
     z-index: 10;
     animation: hideLoader 0s $content-delay ease forwards; 
-  
     .loader__logo{
         width: 250px; 
     }
-  
     .progress-bar {
         width: 300px;
         height: 16px;
@@ -103,7 +100,6 @@
         opacity: 1; 
     }
   }
-  
   @keyframes progress-bar {
     0% {
         transform: scaleX(0); 
@@ -123,7 +119,6 @@
         transform: scaleX(1); 
     }
   }
-  
   @keyframes hideLoader {
     to {
         opacity: 0; 

@@ -1,8 +1,5 @@
 @charset "UTF-8";
 /* Variables */
-/* Durée totale de la barre de progression */
-/* Délai avant le début de la barre */
-/* Calcul du délai pour afficher le contenu */
 /* General */
 * {
   margin: 0;
@@ -14,6 +11,17 @@ body {
   margin: 14px 0px 0px 0px;
   background-color: #FFFFFF;
   font-family: "Roboto", sans-serif;
+}
+
+a {
+  width: 100%;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+}
+a:hover {
+  cursor: pointer;
 }
 
 /* Composants */
@@ -63,6 +71,31 @@ body {
 }
 
 /* Header Restaurants */
+.header-Resto {
+  display: flex;
+  flex-direction: column;
+}
+.header-Resto .précèdent {
+  width: 8vw;
+}
+.header-Resto__title {
+  display: flex;
+  gap: 11.2vw;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 13px 4.53vw 13px 4.43vw;
+}
+.header-Resto__logo {
+  width: 52.53vw;
+}
+.header-Resto__restaurants__img {
+  width: 100%;
+  height: 275px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+}
+
 /* footer */
 .footer {
   background-color: #353535;
@@ -148,6 +181,10 @@ body {
   background-color: #F6F6F6;
   margin-top: 68px;
   padding: 54px 20px 68px 20px;
+  width: 100%;
+}
+.Restaurants__List {
+  width: 100%;
 }
 .Restaurants__button-new {
   Color: #008766;
@@ -167,6 +204,7 @@ body {
   height: 251px;
   background-color: #FFFFFF;
   margin-top: 18px;
+  width: 100%;
 }
 .Restaurants__Card__Image {
   position: relative;
@@ -238,9 +276,15 @@ body {
     width: 100%;
   }
   .Restaurants__Card {
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+  }
+  .Restaurants a {
     width: calc((100% - 6.94vw) / 2);
     height: 251px;
     margin-top: 0;
+    display: flex;
   }
   .footer {
     display: flex;
@@ -256,7 +300,98 @@ body {
     gap: 0.49vw;
   }
 }
+/* RESTAURANTS */
+.hero__Resto, .entrées, .plats, .desserts, .button-Resto {
+  padding: 40px 4.53vw 0 4.53vw;
+  background-color: #F6F6F6;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hero__Resto {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  height: 80px;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 290px;
+}
+.hero__Resto h1 {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 28px;
+}
+
+.entrées {
+  margin-top: 27px;
+}
+
+.entrées__title, .plats__title, .desserts__title {
+  display: flex;
+  flex-direction: column;
+}
+.entrées__title h2, .plats__title h2, .desserts__title h2 {
+  font-weight: lighter;
+  font-size: 16px;
+}
+.entrées__title__bar, .plats__title__bar, .desserts__title__bar {
+  width: 10.67vw;
+  height: 3px;
+  background-color: #99E2D0;
+  margin-top: 9px;
+}
+
+.entrées__card, .plats__card, .desserts__card {
+  border: 1px solid #FFFFFF;
+  border-radius: 15px;
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 13.5px 4vw;
+  display: flex;
+  justify-content: space-between;
+}
+.entrées__card__text, .plats__card__text, .desserts__card__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.entrées__card__text h3, .plats__card__text h3, .desserts__card__text h3 {
+  font-weight: 500;
+  font-size: 18px;
+}
+.entrées__card__text p, .plats__card__text p, .desserts__card__text p {
+  font-weight: lighter;
+  font-size: 15px;
+}
+.entrées__card__price, .plats__card__price, .desserts__card__price {
+  display: flex;
+  align-items: flex-end;
+}
+.entrées__card__price .euro, .plats__card__price .euro, .desserts__card__price .euro {
+  width: 9px;
+  height: 18px;
+}
+
+.button-Resto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
+}
+.button-Resto a {
+  margin: 0;
+}
+
 /*********** Animations et Transitions ***********/
+/* Durée totale de la barre de progression */
+/* Délai avant le début de la barre */
+/* Calcul du délai pour afficher le contenu */
 /*Boutons survols*/
 .button-animation {
   position: relative;
@@ -293,6 +428,7 @@ body {
   width: 100%;
   height: 100%;
   transition: opacity 0.3s ease-in-out;
+  z-index: 1;
 }
 .like-button .like-img-default {
   opacity: 1;

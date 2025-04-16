@@ -1,0 +1,88 @@
+/* RESTAURANTS */
+.hero__Resto, .entrées, .plats, .desserts, .button-Resto{
+    padding: 40px 4.53vw 0 4.53vw;
+    background-color: $background-primary-color;
+    font-family: $font-primary;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.hero__Resto{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 290px;
+    & h1 {
+    font-family: $font-Resto-title;
+    font-size: 28px;
+    }
+}
+
+.entrées{
+    margin-top: 27px;
+}
+
+.entrées__title, .plats__title, .desserts__title{
+    display: flex;
+    flex-direction: column;
+    & h2 {
+        font-weight: lighter;
+        font-size: 16px;
+    }
+    &__bar{
+        width: 10.67vw;
+        height: 3px;
+        background-color: $tertiary-color;
+        margin-top: 9px;
+    } 
+}
+
+.entrées__card, .plats__card, .desserts__card{
+    border: 1px solid $white;
+    border-radius: 15px;
+    background-color: $white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 13.5px 4vw;
+    display: flex;
+    justify-content: space-between;
+    &__text{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        & h3{
+            font-weight: 500;
+            font-size: 18px;
+        }
+        & p{
+            font-weight: lighter;
+            font-size: 15px;
+        }
+    }
+    &__price{
+        display: flex;
+        align-items: flex-end;
+        & .euro{
+            width: 9px;
+            height: 18px;
+        }
+    }
+}
+
+.button-Resto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+    & a{
+        margin: 0;
+    }
+}
+

@@ -10,6 +10,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../Sass/Index.css">
     <title>Ohmyfood</title>
 </head>
@@ -25,17 +30,19 @@
 
         <header class="header-Resto">
             <div class="header-Resto__title">
-                <img src="../Assets/images/Icons/Arrow.svg" alt="icon précèdent">
+                <a class="précèdent" href="../Accueil.html">
+                    <img src="../Assets/images/Icons/Arrow.svg" alt="icon précèdent">
+                </a>
                 <img class="header-Resto__logo" src="../Assets/images/logo/ohmyfood.png" alt="logo ohmyfood">
             </div>
-            <div class="header-Resto__restaurants__img">
-                <img src="../Assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo-restaurants">
+            <div>
+                <img class="header-Resto__restaurants__img" src="../Assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo-restaurants">
             </div>
         </header>
         
         <main>
 
-            <hero class="hero">
+            <hero class="hero__Resto">
                 <h1>La palette du goût</h1>
                 <div class="like-button">
                     <img class="like-img-default" src="../Assets/images/Icons/heart-regular.svg" alt="Icon like">
@@ -154,6 +161,12 @@
                     </div>
                 </div>
             </section>
+
+            <div class="button-Resto">
+                <a class="button button-animation" href="#">
+                    <p>Commandez</p>
+                </a>
+            </div>
 
             <footer class="footer">
                 <img class="footer__logo" src="../Assets/images/logo/ohmyfoodwhite.svg" alt="logo ohmyfood">
