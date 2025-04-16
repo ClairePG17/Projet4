@@ -29,19 +29,21 @@
     }
     &__title{
         display: flex;
-        gap: 11.2vw;
-        justify-content: flex-start;
         align-items: center;
         margin: 13px 4.53vw 13px 4.43vw;
     }
     &__logo{
-        width: 52.53vw;
+        width: 197px;
+        height: 36px;
+        margin-left: auto;
+        margin-right: auto;
     }
     &__restaurants__img{
         width: 100%;
         height: 275px;
         object-fit: cover;
         position: relative;
+       
     }
 }
 

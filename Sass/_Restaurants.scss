@@ -11,15 +11,16 @@
 .hero__Resto{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
     height: 80px;
     width: 100%;
     position: absolute;
+    padding-bottom: 40px;
     z-index: 1;
-    top: 290px;
+    top: 19%;
     & h1 {
     font-family: $font-Resto-title;
     font-size: 28px;
@@ -27,7 +28,7 @@
 }
 
 .entrées{
-    margin-top: 27px;
+    margin-top: 40px;
 }
 
 .entrées__title, .plats__title, .desserts__title{
@@ -86,3 +87,24 @@
     }
 }
 
+/********** Le code ci-dessous correspond à la version responsive uniquement **********/
+
+/****** Media queries ***********/
+/*  Desktop :  more than 1024px */
+@media (min-width: 1024px) {
+    .hero__Resto, .entrées, .plats, .desserts, .button-Resto{
+        padding: 40px 14.58vw;
+        margin-right: 14.4vw;
+        margin-left: 14.4vw;
+    }
+
+    .hero__Resto{
+        width: calc(100% - 28.8vw)
+    }
+
+    .entrées__title, .plats__title, .desserts__title{
+        &__bar{
+            width: 2.78vw;
+        } 
+    }
+}

@@ -80,13 +80,14 @@ a:hover {
 }
 .header-Resto__title {
   display: flex;
-  gap: 11.2vw;
-  justify-content: flex-start;
   align-items: center;
   margin: 13px 4.53vw 13px 4.43vw;
 }
 .header-Resto__logo {
-  width: 52.53vw;
+  width: 197px;
+  height: 36px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .header-Resto__restaurants__img {
   width: 100%;
@@ -313,15 +314,16 @@ a:hover {
 .hero__Resto {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   height: 80px;
   width: 100%;
   position: absolute;
+  padding-bottom: 40px;
   z-index: 1;
-  top: 290px;
+  top: 19%;
 }
 .hero__Resto h1 {
   font-family: "Shrikhand", sans-serif;
@@ -329,7 +331,7 @@ a:hover {
 }
 
 .entrées {
-  margin-top: 27px;
+  margin-top: 40px;
 }
 
 .entrées__title, .plats__title, .desserts__title {
@@ -388,6 +390,22 @@ a:hover {
   margin: 0;
 }
 
+/********** Le code ci-dessous correspond à la version responsive uniquement **********/
+/****** Media queries ***********/
+/*  Desktop :  more than 1024px */
+@media (min-width: 1024px) {
+  .hero__Resto, .entrées, .plats, .desserts, .button-Resto {
+    padding: 40px 14.58vw;
+    margin-right: 14.4vw;
+    margin-left: 14.4vw;
+  }
+  .hero__Resto {
+    width: calc(100% - 28.8vw);
+  }
+  .entrées__title__bar, .plats__title__bar, .desserts__title__bar {
+    width: 2.78vw;
+  }
+}
 /*********** Animations et Transitions ***********/
 /* Durée totale de la barre de progression */
 /* Délai avant le début de la barre */
