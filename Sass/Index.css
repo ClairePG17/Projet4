@@ -407,10 +407,7 @@ a:hover {
   }
 }
 /*********** Animations et Transitions ***********/
-/* Durée totale de la barre de progression */
-/* Délai avant le début de la barre */
-/* Calcul du délai pour afficher le contenu */
-/*Boutons survols*/
+/* Boutons survols */
 .button-animation {
   position: relative;
   z-index: 0;
@@ -461,7 +458,7 @@ a:hover {
   opacity: 1;
 }
 
-/*Loader*/
+/* Loader */
 .loader {
   position: fixed;
   inset: 0; /* pour couvrir toute la page */
@@ -526,5 +523,57 @@ a:hover {
   to {
     opacity: 0;
     visibility: hidden;
+  }
+}
+/* Arrivée des menus */
+.animation__menu__1, .animation__menu__2, .animation__menu__3, .animation__menu__4, .animation__menu__5, .animation__menu__6, .animation__menu__7, .animation__menu__8, .animation__menu__9, .animation__menu__10, .animation__menu__11, .animation__menu__12 {
+  opacity: 0;
+  transform: translateX(100vw);
+}
+.animation__menu__1 {
+  animation: animation__menu 4.5s 0s forwards;
+}
+.animation__menu__2 {
+  animation: animation__menu 4.5s 0.2s forwards;
+}
+.animation__menu__3 {
+  animation: animation__menu 4.5s 0.4s forwards;
+}
+.animation__menu__4 {
+  animation: animation__menu 4.5s 0.6s forwards;
+}
+.animation__menu__5 {
+  animation: animation__menu 4.5s 0.8s forwards;
+}
+.animation__menu__6 {
+  animation: animation__menu 4.5s 1s forwards;
+}
+.animation__menu__7 {
+  animation: animation__menu 4.5s 1.2s forwards;
+}
+.animation__menu__8 {
+  animation: animation__menu 4.5s 1.4s forwards;
+}
+.animation__menu__9 {
+  animation: animation__menu 4.5s 1.6s forwards;
+}
+.animation__menu__10 {
+  animation: animation__menu 4.5s 1.8s forwards;
+}
+.animation__menu__11 {
+  animation: animation__menu 4.5s 2s forwards;
+}
+.animation__menu__12 {
+  animation: animation__menu 4.5s 2.2s forwards;
+}
+
+@keyframes animation__menu {
+  0% {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }/*# sourceMappingURL=Index.css.map */
