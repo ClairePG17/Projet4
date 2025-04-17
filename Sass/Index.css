@@ -52,7 +52,7 @@ a:hover {
 .button__select {
   display: flex;
   align-items: center;
-  padding: 25px 5.33vw;
+  padding: 25px 25px;
   height: 100%;
   border: 1px solide #99E2D0;
   border-bottom-right-radius: 15px;
@@ -376,7 +376,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 13.5px 4vw;
+  padding: 13.5px 15px;
 }
 .entrées__card__text h3, .plats__card__text h3, .desserts__card__text h3 {
   font-weight: 500;
@@ -610,7 +610,7 @@ a:hover {
   text-overflow: ellipsis;
 }
 .entrées__card .button__card__right, .plats__card .button__card__right, .desserts__card .button__card__right {
-  transform: translateX(11vw);
+  transform: translateX(59px);
   transition: transform 0.3s cubic-bezier(0.3, 0.1, 0.5, 0.9);
 }
 .entrées__card .button__select, .plats__card .button__select, .desserts__card .button__select {

@@ -64,7 +64,7 @@ a {
   .button__select{
     display: flex;
     align-items: center;
-    padding: 25px 5.33vw;
+    padding: 25px 25px;
     height: 100%;
     border: 1px solide $tertiary-color;
     border-bottom-right-radius: 15px;
@@ -75,3 +75,5 @@ a {
       color: $tertiary-color;
     }
   }
+
+  
