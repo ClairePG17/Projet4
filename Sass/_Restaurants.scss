@@ -47,17 +47,17 @@
 }
 
 .entrées__card, .plats__card, .desserts__card{
-    border: 1px solid $white;
+    border: 0px solid $white;
     border-radius: 15px;
     background-color: $white;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    padding: 13.5px 4vw;
     display: flex;
     justify-content: space-between;
     &__text{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        padding: 13.5px 4vw;
         & h3{
             font-weight: 500;
             font-size: 18px;
@@ -69,11 +69,16 @@
     }
     &__price{
         display: flex;
-        align-items: flex-end;
+        padding-bottom: 15px;
         & .euro{
             width: 9px;
             height: 18px;
+            }
         }
+    .button__card__right {
+        display: flex;
+        align-items: flex-end;
+        gap: 1.5vw;
     }
 }
 

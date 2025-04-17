@@ -37,7 +37,6 @@ a {
     }
 }
 
-
 /* Composants */
 
 .button{
@@ -62,3 +61,17 @@ a {
     border-top-right-radius: 15px;
   }
   
+  .button__select{
+    display: flex;
+    align-items: center;
+    padding: 25px 5.33vw;
+    height: 100%;
+    border: 1px solide $tertiary-color;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: $tertiary-color;
+    position: relative;
+    &__icon{
+      color: $tertiary-color;
+    }
+  }

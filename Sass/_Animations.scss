@@ -2,7 +2,8 @@
 $duration: 1.5s; 
 $duration-delay: 0.5s; 
 $content-delay: $duration + ($duration-delay * 2); 
-$duration-animation__menu: $content-delay + 2s;
+$duration-animation__menu: $content-delay + 0.2s;
+$timing-soft-ease: cubic-bezier(0.3, 0.1, 0.5, 0.9);
 
 /* Boutons survols */
 .button-animation{
@@ -134,40 +135,43 @@ $duration-animation__menu: $content-delay + 2s;
       transform: translateX(100vw); 
     }
     &__1{
-      animation: animation__menu $duration-animation__menu 0s forwards;
+      animation: animation__menu $duration-animation__menu 0.2s $timing-soft-ease forwards;
     }  
     &__2{
-      animation: animation__menu $duration-animation__menu 0.2s forwards;
+      animation: animation__menu $duration-animation__menu 0.4s $timing-soft-ease forwards;
     }
     &__3{
-      animation: animation__menu $duration-animation__menu 0.4s forwards;
+      animation: animation__menu $duration-animation__menu 0.6s $timing-soft-ease forwards;
     }
     &__4{
-      animation: animation__menu $duration-animation__menu 0.6s forwards;
+      animation: animation__menu $duration-animation__menu 0.8s $timing-soft-ease forwards;
     }
     &__5{
-      animation: animation__menu $duration-animation__menu 0.8s forwards;
+      animation: animation__menu $duration-animation__menu 1s $timing-soft-ease forwards;
     }
     &__6{
-      animation: animation__menu $duration-animation__menu 1s forwards;
+      animation: animation__menu $duration-animation__menu 1.2s $timing-soft-ease forwards;
     }
     &__7{
-      animation: animation__menu $duration-animation__menu 1.2s forwards;
+      animation: animation__menu $duration-animation__menu 1.4s $timing-soft-ease forwards;
     }
     &__8{
-      animation: animation__menu $duration-animation__menu 1.4s forwards;
+      animation: animation__menu $duration-animation__menu 1.6s $timing-soft-ease forwards;
     }
     &__9{
-      animation: animation__menu $duration-animation__menu 1.6s forwards;
+      animation: animation__menu $duration-animation__menu 1.8s $timing-soft-ease forwards;
     }
     &__10{
-      animation: animation__menu $duration-animation__menu 1.8s forwards;
+      animation: animation__menu $duration-animation__menu 2s $timing-soft-ease forwards;
     }
     &__11{
-      animation: animation__menu $duration-animation__menu 2s forwards;
+      animation: animation__menu $duration-animation__menu 2.2s $timing-soft-ease forwards;
     }
     &__12{
-      animation: animation__menu $duration-animation__menu 2.2s forwards;
+      animation: animation__menu $duration-animation__menu 2.4s $timing-soft-ease forwards;
+    }
+    &__13{
+      animation: animation__menu $duration-animation__menu 2.6s $timing-soft-ease forwards;
     }
   }
   
@@ -179,5 +183,35 @@ $duration-animation__menu: $content-delay + 2s;
     100% {
         transform: translateX(0); 
         opacity: 1; 
+    }
+  }
+
+  /* Sélection des plats */
+  .entrées__card, .plats__card, .desserts__card {
+    &__text {
+      min-width: 0;
+      h3, p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+    .button__card__right{
+      transform: translateX(11vw);
+      transition: transform 0.3s $timing-soft-ease;
+    }
+    .button__select {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.6s ease, visibility 0s 0s;
+    }
+    &:hover {
+      .button__select {
+        visibility: visible;
+        opacity: 1;
+      }
+      .button__card__right{
+        transform: translateX(0);
+      }
     }
   }
