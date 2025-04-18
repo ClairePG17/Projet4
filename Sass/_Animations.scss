@@ -88,8 +88,8 @@ $timing-soft-ease: cubic-bezier(0.3, 0.1, 0.5, 0.9);
   }
   
   .content__accueil {
-    opacity: 0; /* Pour masquer le contenu au début */
-    animation: content 0s $content-delay both; /* Animation pour afficher le contenu après le délai */
+    opacity: 0;
+    animation: content 0s $content-delay both; 
   }
   
   @keyframes content {
@@ -115,7 +115,7 @@ $timing-soft-ease: cubic-bezier(0.3, 0.1, 0.5, 0.9);
     }
     46% {
         transform: scaleX(0.81); 
-        animation-timing-function: cubic-bezier(0.25, 0.25, 1);
+        animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 1);
     }
     100% {
         transform: scaleX(1); 
