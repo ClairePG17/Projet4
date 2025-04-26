@@ -196,34 +196,20 @@ $timing-soft-ease: cubic-bezier(0.3, 0.1, 0.5, 0.9);
         text-overflow: ellipsis;
       }
     }
-    .button__card__right{
-      transform: translateX(0);
-    }
-
+  
     .button__select {
-      position: absolute;
-      right: 0;
-      opacity: 0;
-      visibility: hidden;
-      transform: translateX(-20px);
+      width: 0;
+      padding: 0; 
+      border: none;
+      overflow: hidden;
+      transition: width 0.35s ease-out, padding 0.35s ease-out;
     }
-
-    .entrées__card__price, .plats__card__price, .desserts__card__price, .button__select, .entrées__card p {
-      transition: transform 0.35s ease-out, opacity 0.6s, visibility 0s 0.4s;
-    }
-
+  
     &:hover {
       .button__select {
-        visibility: visible;
-        opacity: 1;
-        transform: translateX(65px);
-        transition: transform 0.35s ease-out, opacity 0.6s ease-out, visibility 0s 0s;
-      }
-      .button__card__right{
-        transform: translateX(-65px);
-      }
-      .entrées__card__text, .plats__card__text, .desserts__card__text {
-        padding-right: 55px;
+        width: 59px;
+        padding: 25px 40px 25px 25px;
+        border: 1px solid $tertiary-color;
       }
     }
   }
