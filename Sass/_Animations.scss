@@ -1,0 +1,215 @@
+/*********** Animations et Transitions ***********/
+$duration: 1.5s; 
+$duration-delay: 0.5s; 
+$content-delay: $duration + ($duration-delay * 2); 
+$duration-animation__menu: 1.2s;
+$timing-soft-ease: cubic-bezier(0.3, 0.1, 0.5, 0.9);
+
+/* Boutons survols */
+.button-animation{
+    position: relative;
+    z-index: 0;
+    transition: box-shadow 300ms;
+    overflow: hidden;
+    &:hover{
+      box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.25);
+      &::after{
+        opacity:1;
+      }
+    }
+    &::after{
+      content: "";
+      position: absolute;
+      opacity: 0;
+      inset: 0;
+      background-color: rgba(255, 255, 255, 0.15);
+      z-index: 1;
+      transition: opacity 300ms;
+      border-radius: inherit;
+    }
+  }
+  
+  /* Bouton Like */
+  .like-button {
+    position: relative;
+    width: 22px; 
+    height: 21px;
+    .like-img-default,
+    .like-img-hover {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transition: opacity 0.3s ease-in-out;
+      z-index: 1;
+    }
+    .like-img-default {
+      opacity: 1;
+    }
+    .like-img-hover {
+      opacity: 0;
+    }
+    &:hover {
+      .like-img-default {
+        opacity: 0;
+      }
+      .like-img-hover {
+        opacity: 1;
+      }
+    }
+  }
+  
+  
+  /* Loader */
+  
+  .loader {
+    position: fixed;
+    inset: 0; /* pour couvrir toute la page */
+    background-color: $background-primary-color; 
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    animation: hideLoader 0s $content-delay ease forwards; 
+    .loader__logo{
+        width: 250px; 
+    }
+    .progress-bar {
+        width: 300px;
+        height: 16px;
+        background: $button-gradient; 
+        border-radius: 15px;
+        overflow: hidden;
+        transform-origin: left; 
+        transform: scaleX(0); 
+        animation: progress-bar $duration $duration-delay both; 
+    }
+  }
+  
+  .content__accueil {
+    opacity: 0;
+    animation: content 0s $content-delay both; 
+  }
+  
+  @keyframes content {
+    0% {
+        transform: translateX(-9999px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0); 
+        opacity: 1; 
+    }
+  }
+  @keyframes progress-bar {
+    0% {
+        transform: scaleX(0); 
+    }
+    17% {
+        transform: scaleX(0.18); 
+    }
+    24% {
+        transform: scaleX(0.40); 
+        animation-timing-function: cubic-bezier(0.9, 0, 0.1, 1);
+    }
+    46% {
+        transform: scaleX(0.81); 
+        animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 1);
+    }
+    100% {
+        transform: scaleX(1); 
+    }
+  }
+  @keyframes hideLoader {
+    to {
+        opacity: 0; 
+        visibility: hidden; 
+    }
+  }
+
+  /* Arrivée des menus */
+  .animation__menu{
+    &__1, &__2, &__3, &__4, &__5, &__6, &__7, &__8, &__9, &__10, &__11, &__12{
+      opacity: 0;
+      transform: translateX(100vw); 
+    }
+    &__1{
+      animation: animation__menu $duration-animation__menu 0.2s $timing-soft-ease forwards;
+    }  
+    &__2{
+      animation: animation__menu $duration-animation__menu 0.4s $timing-soft-ease forwards;
+    }
+    &__3{
+      animation: animation__menu $duration-animation__menu 0.6s $timing-soft-ease forwards;
+    }
+    &__4{
+      animation: animation__menu $duration-animation__menu 0.8s $timing-soft-ease forwards;
+    }
+    &__5{
+      animation: animation__menu $duration-animation__menu 1s $timing-soft-ease forwards;
+    }
+    &__6{
+      animation: animation__menu $duration-animation__menu 1.2s $timing-soft-ease forwards;
+    }
+    &__7{
+      animation: animation__menu $duration-animation__menu 1.4s $timing-soft-ease forwards;
+    }
+    &__8{
+      animation: animation__menu $duration-animation__menu 1.6s $timing-soft-ease forwards;
+    }
+    &__9{
+      animation: animation__menu $duration-animation__menu 1.8s $timing-soft-ease forwards;
+    }
+    &__10{
+      animation: animation__menu $duration-animation__menu 2s $timing-soft-ease forwards;
+    }
+    &__11{
+      animation: animation__menu $duration-animation__menu 2.2s $timing-soft-ease forwards;
+    }
+    &__12{
+      animation: animation__menu $duration-animation__menu 2.4s $timing-soft-ease forwards;
+    }
+    &__13{
+      animation: animation__menu $duration-animation__menu 2.6s $timing-soft-ease forwards;
+    }
+  }
+  
+  @keyframes animation__menu {
+    0% {
+        transform: translateX(100vw);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0); 
+        opacity: 1; 
+    }
+  }
+
+  /* Sélection des plats */
+  .entrées__card, .plats__card, .desserts__card {
+    &__text {
+      min-width: 0;
+      h3, p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  
+    .button__select {
+      width: 0;
+      padding: 0; 
+      border: none;
+      overflow: hidden;
+      transition: width 0.35s ease-out, padding 0.35s ease-out;
+    }
+  
+    &:hover {
+      .button__select {
+        width: 59px;
+        padding: 25px 40px 25px 25px;
+        border: 1px solid $tertiary-color;
+      }
+    }
+  }
